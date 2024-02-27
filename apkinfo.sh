@@ -7,6 +7,15 @@ PKGNAME=`echo $STRLINE | cut -d"'" -f2`
 VERCODE=`echo $STRLINE | cut -d"'" -f4`
 FILENAM=`basename $1`
 
+#########
+. gitsetup.sh
+cp $1 $FILENAM
+git add -A
+git commit -m "$FILENAM"
+git push origin main
+
+#########
+
 
 echo "FHASH='$HASHCOD'"
 echo "PKGN='$PKGNAME'"
