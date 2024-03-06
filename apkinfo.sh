@@ -16,7 +16,7 @@ case $yn in
 		git add -A;
 		git commit -m "$FILENAM";
 		git push origin main;
-		break;;
+		;;
 	[Nn]* ) echo "---" ;;
 	* ) echo "--";;
 esac
