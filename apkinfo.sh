@@ -30,5 +30,26 @@ echo "data['link']='https://raw.githubusercontent.com/kiosksp002/loja/main/$FILE
 
 echo
 echo "jobmap['XXXXX']='INST $FILENAM';"
+echo
+echo
+
+########
+echo '        {'
+echo '            "t": "apk",'
+echo '            "l": "INST '$FILENAM'",'
+echo '            "h": {'
+echo '                "pkgn": "'$PKGNAME'",'
+echo '                "vc": "'$VERCODE'",'
+echo '                "fh": "'$HASHCOD'"'
+echo '            },'
+echo '            "d": {'
+echo '                "User-Agent": "curl/7.38.0",'
+echo '                "link": "https://raw.githubusercontent.com/kiosksp002/loja/main/'$FILENAM'",'
+echo '                "ma": true,'
+echo '                "ida": true'
+echo '            }'
+echo '        },'
+
+
 
 
