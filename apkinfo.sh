@@ -27,6 +27,7 @@ echo "FHASH='$HASHCOD'"
 echo "PKGN='$PKGNAME'"
 echo "VC='$VERCODE'"
 echo "data['link']='https://raw.githubusercontent.com/kiosksp002/loja/main/$FILENAM'"
+echo "data['hash']='$HASHCOD'"
 
 echo
 echo "jobmap['XXXXX']='INST $FILENAM';"
