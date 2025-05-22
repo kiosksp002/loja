@@ -22,6 +22,7 @@ case $yn in
 esac
 #########
 
+URL_LINK="https://raw.githubusercontent.com/kiosksp002/loja/main/$FILENAM"
 
 echo "FHASH='$HASHCOD'"
 echo "PKGN='$PKGNAME'"
@@ -51,6 +52,14 @@ echo '                "ida": true'
 echo '            }'
 echo '        },'
 
+echo 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+#echo "$URL_LINK"
+#echo 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
+if curl -s --head --request GET "$URL_LINK" --max-time 5 | grep "HTTP/2 200" > /dev/null; then
+  echo "URL existe e está acessível."
+else
+  echo "URL não existe ou não está acessível."
+fi
 
 
